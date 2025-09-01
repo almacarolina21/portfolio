@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f8faff;
+      background: #fdfaff;
       color: #333;
       line-height: 1.6;
     }
@@ -17,6 +17,7 @@
       background: linear-gradient(135deg, #c0e8ff, #ffe4f1);
       text-align: center;
       padding: 3rem 1rem;
+      position: relative;
     }
     header h1 {
       font-size: 2.5rem;
@@ -26,14 +27,28 @@
       font-size: 1.2rem;
       color: #444;
     }
-    nav {
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      object-fit: cover;
       margin-top: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    nav {
+      margin-top: 1.5rem;
     }
     nav a {
       margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
       color: #0077cc;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff6fa5;
     }
     section {
       max-width: 900px;
@@ -45,7 +60,7 @@
       color: #ff6fa5;
       margin-bottom: 1rem;
     }
-    .about, .skills, .projects, .contact {
+    .about, .skills, .projects, .blog, .contact {
       background: white;
       padding: 2rem;
       margin-bottom: 2rem;
@@ -63,23 +78,30 @@
       padding: 0.5rem 1rem;
       border-radius: 15px;
       font-size: 0.9rem;
+      transition: all 0.3s ease;
     }
-    .projects-grid {
+    .skills-list span:hover, .contact-links a:hover {
+      background: #ffe4f1;
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .projects-grid, .blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
     }
-    .project-card {
+    .project-card, .blog-card {
       background: #fff6fa;
       padding: 1.5rem;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
-    .project-card:hover {
-      transform: translateY(-5px);
+    .project-card:hover, .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
-    .project-card h3 {
+    .project-card h3, .blog-card h3 {
       margin-top: 0;
     }
     footer {
@@ -94,10 +116,13 @@
   <header>
     <h1>Hi, I'm Alma 🌸</h1>
     <p>A data nerdette turning messy data into sparkling insights ✨</p>
+    <!-- 👇 Replace profile.jpg with your own image (store it in the same repo) -->
+    <img src="profile.jpg" alt="Alma's picture" class="profile-pic" />
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -141,6 +166,27 @@
       <span>📉 Data Visualization</span>
       <span>🧮 Math + Stats</span>
       <span>💡 Problem Solving</span>
+    </div>
+  </section>
+
+  <section id="blog" class="blog">
+    <h2>🌸 Blog</h2>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <h3>✨ My Journey into Data Science</h3>
+        <p>A reflection on how I transitioned from healthcare analytics into data science.</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="blog-card">
+        <h3>📊 Favorite Data Viz Tools</h3>
+        <p>Sharing my go-to libraries for making insights beautiful (Matplotlib, Seaborn, Plotly 💖).</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="blog-card">
+        <h3>🌱 Data for Human Flourishing</h3>
+        <p>Exploring how data science can be a force for good in mental health and education.</p>
+        <a href="#">Read More →</a>
+      </div>
     </div>
   </section>
 
