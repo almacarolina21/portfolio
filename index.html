@@ -1,132 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Data Science Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alma's Data Science Portfolio 🌸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #fdfdfd;
+      font-family: 'Poppins', sans-serif;
+      background: #fdfaff;
       color: #333;
+      line-height: 1.6;
     }
     header {
+      background: linear-gradient(135deg, #c0e8ff, #ffe4f1);
       text-align: center;
       padding: 3rem 1rem;
-      background: linear-gradient(135deg, #b3e5fc, #f8bbd0);
-      color: #333;
-    }
-    header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 1rem;
+      position: relative;
     }
     header h1 {
-      font-size: 2.2rem;
-      margin: 0.5rem 0;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
     header p {
       font-size: 1.2rem;
-      margin: 0;
+      color: #444;
+    }
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      object-fit: cover;
+      margin-top: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    nav {
+      margin-top: 1.5rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #0077cc;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff6fa5;
     }
     section {
       max-width: 900px;
       margin: 2rem auto;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 1rem;
     }
     h2 {
-      border-bottom: 2px solid #e1bee7;
-      padding-bottom: 0.5rem;
-      color: #6a1b9a;
+      text-align: center;
+      color: #ff6fa5;
+      margin-bottom: 1rem;
     }
-    .projects, .blog {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    .about, .skills, .projects, .blog, .contact {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .skills-list, .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1rem;
     }
-    .card {
-      background: #fafafa;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
+    .skills-list span, .contact-links a {
+      background: #c0e8ff;
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
     }
-    .card:hover {
-      transform: translateY(-4px);
+    .skills-list span:hover, .contact-links a:hover {
+      background: #ffe4f1;
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .card h3 {
+    .projects-grid, .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card, .blog-card {
+      background: #fff6fa;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover, .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .project-card h3, .blog-card h3 {
       margin-top: 0;
-      color: #3949ab;
     }
     footer {
       text-align: center;
       padding: 1.5rem;
-      background: #f3e5f5;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #3949ab;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      background: #ffe4f1;
+      color: #444;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="images/your-photo.jpg" alt="Your Photo">
-    <h1>Your Name ✨</h1>
-    <p>Data Scientist | Math Enthusiast | Problem Solver</p>
+    <h1>Hi, I'm Alma 🌸</h1>
+    <p>A data nerdette turning messy data into sparkling insights ✨</p>
+    <!-- 👇 Replace profile.jpg with your own image (store it in the same repo) -->
+    <img src="profile.jpg" alt="Alma's picture" class="profile-pic" />
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>About Me 💡</h2>
-    <p>Hello! I’m a passionate data scientist who loves turning data into insights. With a background in math, problem solving, and a bit of creative flair, I enjoy making analytics approachable and fun. 🌸</p>
+  <section id="about" class="about">
+    <h2>💌 About Me</h2>
+    <p>
+      I’m a data scientist with a love for math, problem-solving, and using data to help people thrive 🌱. 
+      With a background in healthcare analytics, I’m passionate about turning insights into impact.  
+      Also powered by coffee ☕ and walks with my pup Einstein 🐶.
+    </p>
   </section>
 
-  <section>
-    <h2>Projects 📊</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>Spending Predictions</h3>
-        <p>Built a forecasting model to predict U.S. spending patterns using Python and machine learning.</p>
+  <section id="projects" class="projects">
+    <h2>📊 Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>📖 Childhood Trauma Insights</h3>
+        <p>Analyzing ACEs and predicting mental health outcomes with machine learning.</p>
+        <a href="#">View Project →</a>
       </div>
-      <div class="card">
-        <h3>Health Data Insights</h3>
-        <p>Analyzed Apple Health data to uncover daily patterns in sleep, steps, and heart rate trends.</p>
+      <div class="project-card">
+        <h3>💻 YouTube Ad Complaints</h3>
+        <p>Quantitative UX Research analyzing user frustration with video ads.</p>
+        <a href="#">View Project →</a>
+      </div>
+      <div class="project-card">
+        <h3>📈 U.S. Spending Predictions</h3>
+        <p>Forecasting national expenditure trends with time-series models.</p>
+        <a href="#">View Project →</a>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Blog 📝</h2>
-    <div class="blog">
-      <div class="card">
-        <h3>Why I Love Data Science</h3>
-        <p>Sharing my journey into data, from math puzzles to real-world impact. 🌟</p>
+  <section id="skills" class="skills">
+    <h2>🛠 Skills</h2>
+    <div class="skills-list">
+      <span>🐍 Python</span>
+      <span>📊 SQL</span>
+      <span>📈 Machine Learning</span>
+      <span>📉 Data Visualization</span>
+      <span>🧮 Math + Stats</span>
+      <span>💡 Problem Solving</span>
+    </div>
+  </section>
+
+  <section id="blog" class="blog">
+    <h2>🌸 Blog</h2>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <h3>✨ My Journey into Data Science</h3>
+        <p>A reflection on how I transitioned from healthcare analytics into data science.</p>
+        <a href="#">Read More →</a>
       </div>
-      <div class="card">
-        <h3>Fun with Visualization</h3>
-        <p>Exploring how cute and creative charts can make data storytelling engaging!</p>
+      <div class="blog-card">
+        <h3>📊 Favorite Data Viz Tools</h3>
+        <p>Sharing my go-to libraries for making insights beautiful (Matplotlib, Seaborn, Plotly 💖).</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="blog-card">
+        <h3>🌱 Data for Human Flourishing</h3>
+        <p>Exploring how data science can be a force for good in mental health and education.</p>
+        <a href="#">Read More →</a>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Contact 📬</h2>
-    <p>Let’s connect! Reach out on <a href="https://www.linkedin.com">LinkedIn</a> or check out my <a href="https://github.com">GitHub</a>.</p>
+  <section id="contact" class="contact">
+    <h2>🌸 Let’s Connect!</h2>
+    <div class="contact-links">
+      <a href="https://github.com/yourusername" target="_blank">🐱 GitHub</a>
+      <a href="https://www.linkedin.com/in/yourusername" target="_blank">💼 LinkedIn</a>
+      <a href="mailto:youremail@example.com">💌 Email</a>
+    </div>
   </section>
 
   <footer>
-    <p>Made with 💖 and data | © 2025 Your Name</p>
+    <p>✨ Built with love and data ✨</p>
   </footer>
 </body>
 </html>
+
