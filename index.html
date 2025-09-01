@@ -3,152 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alma's Data Science Portfolio 🌸</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <title>My Data Science Portfolio</title>
   <style>
     body {
-      font-family: 'Quicksand', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: #fdf6f9;
-      color: #444;
+      padding: 0;
+      background: #fdfdfd;
+      color: #333;
     }
     header {
       text-align: center;
-      padding: 2rem;
-      background: #cce7ff;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #b3e5fc, #f8bbd0);
+      color: #333;
     }
     header img {
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      border: 3px solid white;
+      border: 4px solid white;
       margin-bottom: 1rem;
     }
     header h1 {
-      margin: 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
+      margin: 0.5rem 0;
     }
     header p {
-      font-size: 1.1rem;
-    }
-    nav {
-      background: #ffe4ec;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #444;
-      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 0;
     }
     section {
-      padding: 2rem;
       max-width: 900px;
-      margin: auto;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
     h2 {
-      color: #ff5c8a;
-      margin-bottom: 1rem;
+      border-bottom: 2px solid #e1bee7;
+      padding-bottom: 0.5rem;
+      color: #6a1b9a;
     }
     .projects, .blog {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
     .card {
-      background: white;
+      background: #fafafa;
       padding: 1rem;
       border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       transition: transform 0.2s;
     }
     .card:hover {
-      transform: scale(1.02);
+      transform: translateY(-4px);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #3949ab;
     }
     footer {
       text-align: center;
-      background: #cce7ff;
-      padding: 1rem;
+      padding: 1.5rem;
+      background: #f3e5f5;
       font-size: 0.9rem;
+    }
+    a {
+      color: #3949ab;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
-    <!-- Replace profile.jpg with your own picture file in the repo -->
-    <img src="profile.jpg" alt="Alma's photo">
-    <h1>Hi, I'm Alma 🌸</h1>
-    <p>Data Scientist | Storyteller with Data 📊 | Lover of math & problem-solving ✨</p>
+    <img src="images/your-photo.jpg" alt="Your Photo">
+    <h1>Your Name ✨</h1>
+    <p>Data Scientist | Math Enthusiast | Problem Solver</p>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>🌼 About Me</h2>
-    <p>
-      I'm a data nerdette who loves turning messy data into sparkling insights 💫. 
-      I have a Master's in Data Science, a background in healthcare analytics, and a passion for 
-      using data to help people thrive 🌱. Outside of work, I enjoy solving math puzzles 🧮, 
-      working out, and hanging out with my dog 🐶.
-    </p>
+  <section>
+    <h2>About Me 💡</h2>
+    <p>Hello! I’m a passionate data scientist who loves turning data into insights. With a background in math, problem solving, and a bit of creative flair, I enjoy making analytics approachable and fun. 🌸</p>
   </section>
 
-  <section id="projects">
-    <h2>💻 Projects</h2>
+  <section>
+    <h2>Projects 📊</h2>
     <div class="projects">
       <div class="card">
-        <h3>📖 Childhood Trauma Insights</h3>
-        <p>A predictive model to identify kids at risk of mental health struggles.</p>
+        <h3>Spending Predictions</h3>
+        <p>Built a forecasting model to predict U.S. spending patterns using Python and machine learning.</p>
       </div>
       <div class="card">
-        <h3>📊 U.S. Spending Dashboard</h3>
-        <p>Interactive visualizations exploring trends in U.S. spending.</p>
-      </div>
-      <div class="card">
-        <h3>🧩 Apple Health Analytics</h3>
-        <p>Personalized wellness insights using Apple Health data.</p>
+        <h3>Health Data Insights</h3>
+        <p>Analyzed Apple Health data to uncover daily patterns in sleep, steps, and heart rate trends.</p>
       </div>
     </div>
   </section>
 
-  <section id="blog">
-    <h2>📝 Blog</h2>
+  <section>
+    <h2>Blog 📝</h2>
     <div class="blog">
       <div class="card">
-        <h3>✨ My Journey into Data Science</h3>
-        <p>How I transitioned from healthcare analytics into my dream career.</p>
+        <h3>Why I Love Data Science</h3>
+        <p>Sharing my journey into data, from math puzzles to real-world impact. 🌟</p>
       </div>
       <div class="card">
-        <h3>📈 Making Data Cute & Fun</h3>
-        <p>Why data storytelling doesn’t have to be boring.</p>
-      </div>
-      <div class="card">
-        <h3>🌸 Favorite Python Tips</h3>
-        <p>Small tricks that make coding more efficient (and fun!).</p>
+        <h3>Fun with Visualization</h3>
+        <p>Exploring how cute and creative charts can make data storytelling engaging!</p>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>💌 Contact</h2>
-    <p>
-      Let’s connect! You can find me here:
-    </p>
-    <ul>
-      <li>🐙 <a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-      <li>💼 <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a></li>
-      <li>📧 your.email@example.com</li>
-    </ul>
+  <section>
+    <h2>Contact 📬</h2>
+    <p>Let’s connect! Reach out on <a href="https://www.linkedin.com">LinkedIn</a> or check out my <a href="https://github.com">GitHub</a>.</p>
   </section>
 
   <footer>
-    <p>Made with 💕 by Alma | Powered by GitHub Pages</p>
+    <p>Made with 💖 and data | © 2025 Your Name</p>
   </footer>
 </body>
 </html>
