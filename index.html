@@ -1,14 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Cool Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alma's Data Science Portfolio 🌸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; background: #f0f8ff; }
-    h1 { color: #0077cc; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8faff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #c0e8ff, #ffe4f1);
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #444;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #0077cc;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h2 {
+      text-align: center;
+      color: #ff6fa5;
+      margin-bottom: 1rem;
+    }
+    .about, .skills, .projects, .contact {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .skills-list, .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .skills-list span, .contact-links a {
+      background: #c0e8ff;
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      font-size: 0.9rem;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: #fff6fa;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #ffe4f1;
+      color: #444;
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Cool Website 🎉</h1>
-  <p>Built with GitHub Pages</p>
+  <header>
+    <h1>Hi, I'm Alma 🌸</h1>
+    <p>A data nerdette turning messy data into sparkling insights ✨</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about" class="about">
+    <h2>💌 About Me</h2>
+    <p>
+      I’m a data scientist with a love for math, problem-solving, and using data to help people thrive 🌱. 
+      With a background in healthcare analytics, I’m passionate about turning insights into impact.  
+      Also powered by coffee ☕ and walks with my pup Einstein 🐶.
+    </p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>📊 Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>📖 Childhood Trauma Insights</h3>
+        <p>Analyzing ACEs and predicting mental health outcomes with machine learning.</p>
+        <a href="#">View Project →</a>
+      </div>
+      <div class="project-card">
+        <h3>💻 YouTube Ad Complaints</h3>
+        <p>Quantitative UX Research analyzing user frustration with video ads.</p>
+        <a href="#">View Project →</a>
+      </div>
+      <div class="project-card">
+        <h3>📈 U.S. Spending Predictions</h3>
+        <p>Forecasting national expenditure trends with time-series models.</p>
+        <a href="#">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>🛠 Skills</h2>
+    <div class="skills-list">
+      <span>🐍 Python</span>
+      <span>📊 SQL</span>
+      <span>📈 Machine Learning</span>
+      <span>📉 Data Visualization</span>
+      <span>🧮 Math + Stats</span>
+      <span>💡 Problem Solving</span>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>🌸 Let’s Connect!</h2>
+    <div class="contact-links">
+      <a href="https://github.com/yourusername" target="_blank">🐱 GitHub</a>
+      <a href="https://www.linkedin.com/in/yourusername" target="_blank">💼 LinkedIn</a>
+      <a href="mailto:youremail@example.com">💌 Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>✨ Built with love and data ✨</p>
+  </footer>
 </body>
 </html>
